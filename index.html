@@ -2,64 +2,21 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <title>
-    Vinyl Classics | Vintage Vinyl Record Store
-  </title>
-
-  <!-- FAVICON -->
-
-  <link
-    rel="icon"
-    type="image/png"
-    href="images/logo.png"
-  />
-
-  <!-- CSS -->
-
-  <link
-    rel="stylesheet"
-    href="css/style.css"
-  />
-
-  <!-- GOOGLE FONTS -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinyl Classics | Vintage Vinyl Record Store</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- LUCIDE ICONS -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-
 </head>
 
 <body>
-
-  <!-- ===================================== -->
-  <!-- HEADER -->
-  <!-- ===================================== -->
-
   <header>
-
     <div class="container">
-
       <nav>
-      
-        <!-- LOGO -->
-      
         <a href="index.html" class="logo-wrapper" aria-label="Vinyl Classics Home">
           <img src="images/logo.png" alt="Vinyl Classics Logo" class="logo-img" width="52" height="52">
           <div class="logo-text">
@@ -67,12 +24,8 @@
             <span class="logo-subtitle">Vintage Record Store</span>
           </div>
         </a>
-      
-      
-        <!-- MENU -->
-      
-        <div class="nav-links" id="navLinks">
 
+        <div class="nav-links" id="navLinks">
           <div class="nav-dropdown" id="homeDropdown">
             <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
               Home
@@ -83,877 +36,339 @@
               <li><a href="home2.html">Home 2</a></li>
             </ul>
           </div>
-
           <a href="shop.html">Shop</a>
           <a href="turntables.html">Turntables</a>
           <a href="guides.html">Guides</a>
           <a href="trade.html">Trade-In</a>
           <a href="contact.html">Contact</a>
           <a href="login.html" class="nav-auth-login">Login</a>
-
         </div>
-      
-      
-        <!-- ACTIONS -->
-      
+
         <div class="header-actions">
-      
-          <button id="theme-toggle">
-      
+          <button id="theme-toggle" aria-label="Toggle theme">
             <i data-lucide="moon"></i>
-      
           </button>
-      
           <button class="mobile-menu-btn" id="mobileMenuBtn">
-      
             <i data-lucide="menu"></i>
-      
           </button>
-      
         </div>
-      
       </nav>
-
     </div>
-
   </header>
 
-  <!-- ===================================== -->
-  <!-- HERO -->
-  <!-- ===================================== -->
-
-  <section class="hero">
-
+  <section class="hero commerce-hero">
     <div class="container">
-
-      <div class="hero-content">
-
-        <span class="hero-tag">
-
-          Premium Vinyl Experience
-
-        </span>
-
-        <h1>
-
-          Rediscover Music The Analog Way
-
-        </h1>
-
+      <div class="hero-content commerce-hero-content">
+        <span class="hero-tag">Independent Record Shop</span>
+        <h1>Buy Rare Vinyl Records With Collector Confidence</h1>
         <p>
-
-          Explore rare vinyl records, premium
-          turntables, and timeless analog sound
-          crafted for collectors and audiophiles.
-
+          Shop inspected pressings, staff-curated albums, and turntable-ready
+          classics from a professional analog music store.
         </p>
-
-        <!-- HERO BUTTONS -->
-
         <div class="hero-buttons">
-
-          <a
-            href="shop.html"
-            class="btn btn-primary"
-          >
-            Shop Vinyls
+          <a href="shop.html" class="btn btn-primary">
+            <i data-lucide="shopping-bag"></i>
+            Shop Records
           </a>
-
-          <a
-            href="turntables.html"
-            class="btn btn-secondary"
-          >
-            Explore Turntables
-          </a>
-
-        </div>
-
-        <!-- HERO STATS -->
-
-        <div class="hero-stats">
-
-          <div class="stat-box">
-
-            <h3>10K+</h3>
-
-            <p>Rare Records</p>
-
-          </div>
-
-          <div class="stat-box">
-
-            <h3>500+</h3>
-
-            <p>Turntables</p>
-
-          </div>
-
-          <div class="stat-box">
-
-            <h3>24H</h3>
-
-            <p>Local Pickup</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ===================================== -->
-  <!-- GENRES -->
-  <!-- ===================================== -->
-
-  <section class="genres-section">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <span>
-
-          Music Collection
-
-        </span>
-
-        <h2>
-
-          Browse By Genre
-
-        </h2>
-
-        <p>
-
-          Discover timeless classics and legendary
-          albums across every musical era.
-
-        </p>
-
-      </div>
-
-      <!-- GRID -->
-
-      <div class="genres-grid">
-
-        <!-- CARD -->
-
-        <div class="genre-card">
-
-          <div class="genre-icon">
-
+          <a href="turntables.html" class="btn btn-secondary">
             <i data-lucide="disc-3"></i>
-
-          </div>
-
-          <h3>
-
-            Rock
-
-          </h3>
-
-          <p>
-
-            Legendary rock albums and collector editions.
-
-          </p>
-
+            Browse Turntables
+          </a>
         </div>
-
-        <!-- CARD -->
-
-        <div class="genre-card">
-
-          <div class="genre-icon">
-
-            <i data-lucide="music-4"></i>
-
-          </div>
-
-          <h3>
-
-            Jazz
-
-          </h3>
-
-          <p>
-
-            Smooth jazz records and iconic performances.
-
-          </p>
-
-        </div>
-
-        <!-- CARD -->
-
-        <div class="genre-card">
-
-          <div class="genre-icon">
-
-            <i data-lucide="headphones"></i>
-
-          </div>
-
-          <h3>
-
-            Blues
-
-          </h3>
-
-          <p>
-
-            Classic blues collections with authentic sound.
-
-          </p>
-
-        </div>
-
-        <!-- CARD -->
-
-        <div class="genre-card">
-
-          <div class="genre-icon">
-
-            <i data-lucide="radio"></i>
-
-          </div>
-
-          <h3>
-
-            Classical
-
-          </h3>
-
-          <p>
-
-            Elegant orchestral and timeless masterpieces.
-
-          </p>
-
-        </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- ===================================== -->
-  <!-- PRODUCTS -->
-  <!-- ===================================== -->
+  <section class="trust-strip" aria-label="Store promises">
+    <div class="container trust-strip-grid">
+      <div class="trust-item">
+        <img src="images/unique-vinyl-01.jpg" alt="Graded vinyl record">
+        <span>Condition graded records</span>
+      </div>
+      <div class="trust-item">
+        <img src="images/photo-tonearm-detail.jpg" alt="Turntable tonearm detail">
+        <span>Playback checked copies</span>
+      </div>
+      <div class="trust-item">
+        <img src="images/photo-record-store-2.jpg" alt="Record store shelves">
+        <span>Weekly collector drops</span>
+      </div>
+      <div class="trust-item">
+        <img src="images/photo-turntable-warm.jpg" alt="Warm turntable setup">
+        <span>Pickup and setup support</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-one-gallery">
+    <div class="container">
+      <div class="section-title">
+        <span>Home 1 Store Wall</span>
+        <h2>Browse The Shop Like A Collector</h2>
+        <p>Home 1 focuses on a professional buying journey with product-led visuals and trust signals.</p>
+      </div>
+      <div class="home-one-grid">
+        <article class="home-one-tile wide">
+          <img src="images/photo-record-store-3.jpg" alt="Record crates and shop shelves">
+          <div><span>Crate Wall</span><strong>Fresh weekly bins</strong></div>
+        </article>
+        <article class="home-one-tile">
+          <img src="images/unique-vinyl-03.jpg" alt="Classic vinyl sleeve close-up">
+          <div><span>Collector Copies</span><strong>Condition checked</strong></div>
+        </article>
+        <article class="home-one-tile tall">
+          <img src="images/photo-turntable-studio.jpg" alt="Studio turntable setup">
+          <div><span>Listening Desk</span><strong>Gear pairing</strong></div>
+        </article>
+        <article class="home-one-tile">
+          <img src="images/unique-vinyl-12.jpg" alt="Unique record artwork">
+          <div><span>Rare Finds</span><strong>Limited arrivals</strong></div>
+        </article>
+        <article class="home-one-tile">
+          <img src="images/vinyl1.jpg" alt="Vinyl record close-up for collector picks">
+          <div><span>Staff Picks</span><strong>Ready to buy</strong></div>
+        </article>
+        <article class="home-one-tile wide">
+          <img src="images/photo-turntable-top.jpg" alt="Turntable and vinyl listening setup">
+          <div><span>Setup Match</span><strong>Records plus gear</strong></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="feature-split pro-split">
+        <div class="feature-media">
+          <img src="images/photo-record-store-1.jpg" alt="Vinyl Classics record store interior">
+        </div>
+        <div class="feature-copy">
+          <span>Professional Buying Experience</span>
+          <h2>Every Record Is Selected For Sound, Sleeve, And Shelf Value</h2>
+          <p>
+            The shop experience is built around trust. Featured records include
+            pressing style, listening mood, condition notes, and clear buying actions.
+          </p>
+          <ul class="feature-list">
+            <li><i data-lucide="badge-check"></i><span>Clean product cards with genre, pressing, condition, and price.</span></li>
+            <li><i data-lucide="headphones"></i><span>Staff picks for jazz, rock, soul, classical, electronic, and blues listeners.</span></li>
+            <li><i data-lucide="package-check"></i><span>Quick pickup and trade-in routes for repeat collectors.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="products-section">
-
     <div class="container">
-
       <div class="section-title">
-
-        <span>
-
-          Fresh Collection
-
-        </span>
-
-        <h2>
-
-          New Arrivals
-
-        </h2>
-
-        <p>
-
-          Explore the newest additions to our
-          premium vinyl collection.
-
-        </p>
-
+        <span>Fresh Collection</span>
+        <h2>New Arrivals</h2>
+        <p>Newly staged records with richer artwork and clear buying details.</p>
       </div>
 
-      <!-- PRODUCT GRID -->
-
-      <div class="product-grid">
-
-        <!-- PRODUCT -->
-
-        <div class="product-card">
-
+      <div class="product-grid pro-product-grid">
+        <article class="product-card">
           <div class="product-image">
-
-            <img
-              src="images/vinyl1.jpg"
-              alt="Abbey Road vinyl record"
-            >
-
+            <img src="images/unique-vinyl-09.jpg" alt="Abbey Road vintage vinyl record">
           </div>
-
           <div class="product-content">
-
-            <span class="product-category">
-
-              Classic Rock
-
-            </span>
-
-            <h3>
-
-              Abbey Road
-
-            </h3>
-
-            <p>
-
-              The Beatles • 1969 Edition
-
-            </p>
-
+            <span class="product-category">Classic Rock</span>
+            <h3>Abbey Road</h3>
+            <p>The Beatles | VG+ sleeve | 1969 style pressing</p>
             <div class="product-bottom">
-
-              <div class="price">
-
-                $39
-
-              </div>
-
-              <a
-                href="shop.html"
-                class="btn btn-primary"
-              >
-                Add To Cart
-              </a>
-
+              <div class="price">$39</div>
+              <a href="shop.html" class="btn btn-primary">Buy Now</a>
             </div>
-
           </div>
+        </article>
 
-        </div>
-
-        <!-- PRODUCT -->
-
-        <div class="product-card">
-
+        <article class="product-card">
           <div class="product-image">
-
-            <img
-              src="images/vinyl2.jpg"
-              alt="Dark Side vinyl record"
-            >
-
+            <img src="images/unique-vinyl-06.jpg" alt="Midnight Session jazz vinyl">
           </div>
-
           <div class="product-content">
-
-            <span class="product-category">
-
-              Progressive Rock
-
-            </span>
-
-            <h3>
-
-              Dark Side
-
-            </h3>
-
-            <p>
-
-              Pink Floyd • Collector Edition
-
-            </p>
-
+            <span class="product-category">Blue Note Jazz</span>
+            <h3>Midnight Session</h3>
+            <p>Remastered 180g pressing | staff recommended</p>
             <div class="product-bottom">
-
-              <div class="price">
-
-                $42
-
-              </div>
-
-              <a
-                href="shop.html"
-                class="btn btn-primary"
-              >
-                Add To Cart
-              </a>
-
+              <div class="price">$35</div>
+              <a href="shop.html" class="btn btn-primary">Buy Now</a>
             </div>
-
           </div>
+        </article>
 
-        </div>
-
-        <!-- PRODUCT -->
-
-        <div class="product-card">
-
+        <article class="product-card">
           <div class="product-image">
-
-            <img
-              src="images/turntable.jpg"
-              alt="Premium retro turntable"
-            >
-
+            <img src="images/unique-vinyl-07.jpg" alt="Golden Hour Soul vinyl">
           </div>
-
           <div class="product-content">
-
-            <span class="product-category">
-
-              Audio Equipment
-
-            </span>
-
-            <h3>
-
-              Retro Turntable
-
-            </h3>
-
-            <p>
-
-              Premium Audiophile Setup
-
-            </p>
-
+            <span class="product-category">Soul Classics</span>
+            <h3>Golden Hour Soul</h3>
+            <p>Warm analog master | clean daily-play copy</p>
             <div class="product-bottom">
-
-              <div class="price">
-
-                $299
-
-              </div>
-
-              <a
-                href="turntables.html"
-                class="btn btn-primary"
-              >
-                Buy Now
-              </a>
-
+              <div class="price">$32</div>
+              <a href="shop.html" class="btn btn-primary">Buy Now</a>
             </div>
-
           </div>
-
-        </div>
-
+        </article>
       </div>
-
     </div>
-
   </section>
 
-  <!-- ===================================== -->
-  <!-- GUIDES -->
-  <!-- ===================================== -->
-
-  <section class="guides-section">
-
+  <section class="collection-band">
     <div class="container">
-
       <div class="section-title">
-
-        <span>
-
-          Learning Center
-
-        </span>
-
-        <h2>
-
-          Turntable Setup Guides
-
-        </h2>
-
-        <p>
-
-          Everything you need to build the
-          perfect analog listening setup.
-
-        </p>
-
+        <span>Shop By Mood</span>
+        <h2>Find The Right Record Faster</h2>
+        <p>Professional shopping categories make the store feel active and easier to browse.</p>
       </div>
-
-      <!-- GRID -->
-
-      <div class="guides-grid">
-
-        <!-- GUIDE -->
-
-        <div class="guide-card">
-
-          <div class="guide-icon">
-
-            <i data-lucide="speaker"></i>
-
-          </div>
-
-          <h3>
-
-            Beginner Setup
-
-          </h3>
-
-          <p>
-
-            Learn step-by-step turntable setup
-            for your first vinyl experience.
-
-          </p>
-
+      <div class="content-grid mood-grid">
+        <div class="content-card">
+          <div class="content-card-icon"><i data-lucide="sun"></i></div>
+          <h3>Morning Warmth</h3>
+          <p>Soul, folk, and mellow jazz for relaxed daytime listening.</p>
         </div>
-
-        <!-- GUIDE -->
-
-        <div class="guide-card">
-
-          <div class="guide-icon">
-
-            <i data-lucide="sparkles"></i>
-
-          </div>
-
-          <h3>
-
-            Vinyl Cleaning
-
-          </h3>
-
-          <p>
-
-            Keep your vinyl collection pristine
-            with professional cleaning tips.
-
-          </p>
-
+        <div class="content-card">
+          <div class="content-card-icon"><i data-lucide="moon"></i></div>
+          <h3>Late-Night Detail</h3>
+          <p>Quiet pressings for headphones, small rooms, and focused listening.</p>
         </div>
-
-        <!-- GUIDE -->
-
-        <div class="guide-card">
-
-          <div class="guide-icon">
-
-            <i data-lucide="audio-lines"></i>
-
-          </div>
-
-          <h3>
-
-            Cartridge Selection
-
-          </h3>
-
-          <p>
-
-            Discover the ideal cartridge for warm,
-            accurate analog sound.
-
-          </p>
-
+        <div class="content-card">
+          <div class="content-card-icon"><i data-lucide="radio"></i></div>
+          <h3>Classic Rotation</h3>
+          <p>Essential albums that belong in every everyday collection.</p>
         </div>
-
+        <div class="content-card">
+          <div class="content-card-icon"><i data-lucide="sparkles"></i></div>
+          <h3>Collector Shelf</h3>
+          <p>Limited editions, cleaner sleeves, and display-worthy copies.</p>
+        </div>
       </div>
-
     </div>
-
   </section>
 
-  <!-- ===================================== -->
-  <!-- TRADE -->
-  <!-- ===================================== -->
-
-  <section class="trade-section">
-
+  <section class="products-section">
     <div class="container">
+      <div class="section-title">
+        <span>More Pictures</span>
+        <h2>Featured Store Finds</h2>
+        <p>A fuller visual catalog helps the page feel like a real record-buying destination.</p>
+      </div>
+      <div class="product-grid pro-product-grid">
+        <article class="product-card">
+          <div class="product-image">
+            <img src="images/unique-vinyl-08.jpg" alt="Synth Press electronic vinyl">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Electronic</span>
+            <h3>Synth Press</h3>
+            <p>Limited neon sleeve edition | NM vinyl</p>
+            <div class="product-bottom">
+              <div class="price">$44</div>
+              <a href="shop.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="images/unique-vinyl-11.jpg" alt="Delta Evening blues vinyl">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Blues</span>
+            <h3>Delta Evening</h3>
+            <p>Raw guitar club pressing | VG+ vinyl</p>
+            <div class="product-bottom">
+              <div class="price">$41</div>
+              <a href="shop.html" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="images/photo-turntable-top.jpg" alt="Retro turntable and record setup">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Audio Setup</span>
+            <h3>Starter Listening Kit</h3>
+            <p>Record care, setup help, and turntable pairing</p>
+            <div class="product-bottom">
+              <div class="price">$299</div>
+              <a href="turntables.html" class="btn btn-primary">View Gear</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <section class="trade-section pro-cta">
+    <div class="container">
       <div class="trade-content">
-
-        <span>
-
-          Upgrade Your Collection
-
-        </span>
-
-        <h2>
-
-          Trade-In Your Vinyl Collection
-
-        </h2>
-
-        <p>
-
-          Exchange your old records and turntables
-          for premium upgrades and exclusive collector rewards.
-
-        </p>
-
-        <a
-          href="trade.html"
-          class="btn btn-primary"
-        >
+        <span>Upgrade Your Shelf</span>
+        <h2>Trade In Records And Build A Better Collection</h2>
+        <p>Exchange older records or unused equipment for store credit toward rare pressings, turntables, and cleaning essentials.</p>
+        <a href="trade.html" class="btn btn-primary">
+          <i data-lucide="refresh-cw"></i>
           Start Trade-In
         </a>
-
       </div>
-
     </div>
-
   </section>
-
-  <!-- ===================================== -->
-  <!-- NEWSLETTER -->
-  <!-- ===================================== -->
 
   <section class="newsletter-section">
-
     <div class="container">
-
       <div class="newsletter-box">
-
-        <span>
-
-          Collector Community
-
-        </span>
-
-        <h2>
-
-          Join The Vinyl Club
-
-        </h2>
-
-        <p>
-
-          Get rare vinyl drops, exclusive collector
-          editions, and audiophile updates directly
-          in your inbox.
-
-        </p>
-
+        <span>Collector Community</span>
+        <h2>Join The Vinyl Club</h2>
+        <p>Get rare vinyl drops, exclusive collector editions, and audiophile updates directly in your inbox.</p>
         <form class="newsletter-form">
-
-          <input
-            type="email"
-            placeholder="Enter your email"
-          >
-
-          <button
-            type="submit"
-            class="btn btn-primary"
-          >
-            Subscribe
-          </button>
-
+          <input type="email" placeholder="Enter your email">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
         </form>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- ===================================== -->
-  <!-- FOOTER -->
-  <!-- ===================================== -->
-
-<section>
-  <div class="container">
-    <div class="feature-split">
-      <div class="feature-copy"><span>In-Store Experience</span><h2>Curated Pressings, Checked By Real Listeners</h2><p>Every featured record is inspected for sleeve condition, surface marks, playback quality, and pressing details before it reaches the shelf.</p><ul class="feature-list"><li><i data-lucide="check-circle"></i><span>Condition notes on collector and daily-play copies.</span></li><li><i data-lucide="check-circle"></i><span>Listening station recommendations for cartridges and speakers.</span></li><li><i data-lucide="check-circle"></i><span>Fresh arrivals organized by genre, decade, and pressing type.</span></li></ul></div>
-      <div class="feature-media"><img src="images/photo-record-store-1.jpg" alt="Vinyl Classics listening room with record shelves"></div>
-    </div>
-  </div>
-</section>
-
-<section class="products-section">
-  <div class="container">
-    <div class="section-title"><span>New Arrivals</span><h2>Collector Picks This Week</h2><p>Rare-style records, new genres, and setup-ready components with unique artwork.</p></div>
-    <div class="product-grid">
-      <div class="product-card"><div class="product-image"><img src="images/unique-vinyl-06.jpg" alt="Midnight jazz vinyl selection"></div><div class="product-content"><span class="product-category">Blue Note Jazz</span><h3>Midnight Session</h3><p>Remastered 180g pressing</p><div class="product-bottom"><div class="price">$35</div><a href="shop.html" class="btn btn-primary">Buy Now</a></div></div></div>
-      <div class="product-card"><div class="product-image"><img src="images/unique-vinyl-07.jpg" alt="Golden soul vinyl selection"></div><div class="product-content"><span class="product-category">Soul Classics</span><h3>Golden Hour Soul</h3><p>Warm analog master cut</p><div class="product-bottom"><div class="price">$32</div><a href="shop.html" class="btn btn-primary">Buy Now</a></div></div></div>
-      <div class="product-card"><div class="product-image"><img src="images/unique-vinyl-08.jpg" alt="Electronic vinyl and tonearm detail"></div><div class="product-content"><span class="product-category">Electronic</span><h3>Synth Press</h3><p>Limited neon sleeve edition</p><div class="product-bottom"><div class="price">$44</div><a href="shop.html" class="btn btn-primary">Buy Now</a></div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="compact-section">
-  <div class="container">
-    <div class="section-title"><span>Store Services</span><h2>More Than A Record Shelf</h2><p>Build a better listening setup with practical help from our vinyl team.</p></div>
-    <div class="info-grid">
-      <div class="info-card"><span class="info-kicker">01</span><h3>Listening Appointments</h3><p>Compare pressings, cartridges, and speaker pairings before buying.</p></div>
-      <div class="info-card"><span class="info-kicker">02</span><h3>Setup Calibration</h3><p>Tonearm balance, anti-skate checks, cartridge alignment, and speed testing.</p></div>
-      <div class="info-card"><span class="info-kicker">03</span><h3>Collector Requests</h3><p>Share your wish list and we will watch incoming collections for clean copies.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="guides-section">
-  <div class="container">
-    <div class="section-title"><span>Store Experience</span><h2>Why Collectors Keep Coming Back</h2><p>A richer store experience built around discovery, trust, and repeat listening.</p></div>
-    <div class="content-grid">
-      <div class="content-card"><div class="content-card-icon"><i data-lucide="library"></i></div><h3>Deep Catalog Sorting</h3><p>Records are grouped by genre, decade, pressing quality, and collector demand.</p></div>
-      <div class="content-card"><div class="content-card-icon"><i data-lucide="scan-search"></i></div><h3>Condition Notes</h3><p>Key records include condition guidance so buyers know what they are choosing.</p></div>
-      <div class="content-card"><div class="content-card-icon"><i data-lucide="calendar-days"></i></div><h3>Weekly Drops</h3><p>Fresh finds are staged into weekly crate drops and staff selections.</p></div>
-      <div class="content-card"><div class="content-card-icon"><i data-lucide="headphones"></i></div><h3>Listening Help</h3><p>Our team helps match records, turntables, and room setups for better playback.</p></div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="container">
-    <div class="section-title"><span>Store Snapshot</span><h2>A Fuller Analog Destination</h2><p>Quick signals that make the store feel active and established.</p></div>
-    <div class="metric-grid">
-      <div class="metric-card"><strong>10K+</strong><span>Cataloged Records</span></div>
-      <div class="metric-card"><strong>500+</strong><span>Turntable Setups</span></div>
-      <div class="metric-card"><strong>24H</strong><span>Pickup Window</span></div>
-      <div class="metric-card"><strong>6</strong><span>Weekly Staff Picks</span></div>
-    </div>
-  </div>
-</section>
-
   <footer>
-
     <div class="container">
-
       <div class="footer-grid">
-
-        <!-- COLUMN -->
-
         <div class="footer-column">
-
           <a href="index.html" class="footer-logo-link" aria-label="Vinyl Classics Home">
-
             <img src="images/logo.png" alt="Vinyl Classics Logo" class="logo-img" width="52" height="52">
-
             <div class="logo-text footer-brand-text">
               <span class="logo-title">Vinyl Classics</span>
               <span class="logo-subtitle">Vintage Record Store</span>
             </div>
-
           </a>
-
-          <p>
-
-            Premium vintage vinyl record and
-            turntable experience crafted for
-            collectors and audiophiles.
-
-          </p>
-
+          <p>Premium vintage vinyl record and turntable experience crafted for collectors and audiophiles.</p>
         </div>
-
-        <!-- COLUMN -->
-
         <div class="footer-column">
-
-          <h4>
-
-            Quick Links
-
-          </h4>
-
-          <a href="index.html">
-            Home
-          </a>
-
-          <a href="shop.html">
-            Shop
-          </a>
-
-          <a href="turntables.html">
-            Turntables
-          </a>
-
-          <a href="guides.html">
-            Guides
-          </a>
-
-          <a href="trade.html">
-            Trade-In
-          </a>
-
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="turntables.html">Turntables</a>
+          <a href="guides.html">Guides</a>
+          <a href="trade.html">Trade-In</a>
         </div>
-
-        <!-- COLUMN -->
-
         <div class="footer-column">
-
-          <h4>
-
-            Store Hours
-
-          </h4>
-
-          <p>
-
-            Monday - Saturday
-
-          </p>
-
-          <p>
-
-            10:00 AM - 8:00 PM
-
-          </p>
-
-          <p>
-
-            Sunday Closed
-
-          </p>
-
+          <h4>Store Hours</h4>
+          <p>Monday - Saturday</p>
+          <p>10:00 AM - 8:00 PM</p>
+          <p>Sunday Closed</p>
         </div>
-
-        <!-- COLUMN -->
-
         <div class="footer-column">
-
-          <h4>
-
-            Contact
-
-          </h4>
-
-          <p>
-
-            vinyl@classics.com
-
-          </p>
-
-          <p>
-
-            +1 (555) 123-4567
-
-          </p>
-
-          <p>
-
-            Vintage Audio Street
-
-          </p>
-
+          <h4>Contact</h4>
+          <p>vinyl@classics.com</p>
+          <p>+1 (555) 123-4567</p>
+          <p>Vintage Audio Street</p>
         </div>
-
       </div>
-
-      <!-- COPYRIGHT -->
-
-      <div class="copyright">
-
-        © 2026 Vinyl Classics.
-        All Rights Reserved.
-
-      </div>
-
+      <div class="copyright">© 2026 Vinyl Classics. All Rights Reserved.</div>
     </div>
-
   </footer>
 
-  <!-- JAVASCRIPT -->
-
   <script src="js/script.js"></script>
-
 </body>
 
 </html>

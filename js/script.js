@@ -21,10 +21,6 @@ root.setAttribute("dir", savedDirection);
 /* POLISHED UI HELPERS */
 /* ========================================= */
 
-const progressBar = document.createElement("div");
-progressBar.className = "scroll-progress";
-document.body.prepend(progressBar);
-
 const toastStack = document.createElement("div");
 toastStack.className = "toast-stack";
 toastStack.setAttribute("aria-live", "polite");
@@ -52,9 +48,7 @@ function showToast(title, message, icon = "check-circle") {
 }
 
 function updateScrollProgress() {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-  progressBar.style.width = `${Math.min(progress, 100)}%`;
+  return;
 }
 
 window.addEventListener("scroll", updateScrollProgress, { passive: true });
@@ -146,6 +140,54 @@ document.querySelectorAll(".header-actions").forEach((actions) => {
   syncDirectionToggle();
 });
 
+/* ========================================= */
+/* FOOTER SOCIAL LINKS */
+/* ========================================= */
+
+document.querySelectorAll("footer .footer-column:first-child").forEach((column) => {
+  if (column.querySelector(".footer-socials")) return;
+
+  const socials = document.createElement("div");
+  socials.className = "footer-socials";
+  socials.innerHTML = `
+    <a href="https://www.instagram.com/" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.3A4.7 4.7 0 1 1 12 16.7a4.7 4.7 0 0 1 0-9.4Zm0 2A2.7 2.7 0 1 0 12 14.7a2.7 2.7 0 0 0 0-5.4Zm5.1-2.65a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M14 8.25V6.9c0-.75.17-1.15 1.18-1.15H17V2.25A24 24 0 0 0 14.33 2C11.68 2 9.87 3.62 9.87 6.6v1.65H7v3.92h2.87V22H14v-9.83h3.1l.5-3.92H14Z"/>
+      </svg>
+    </a>
+    <a href="https://www.youtube.com/" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21.58 7.2a3 3 0 0 0-2.1-2.12C17.63 4.58 12 4.58 12 4.58s-5.63 0-7.48.5A3 3 0 0 0 2.42 7.2 31.3 31.3 0 0 0 1.92 12a31.3 31.3 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.12c1.85.5 7.48.5 7.48.5s5.63 0 7.48-.5a3 3 0 0 0 2.1-2.12 31.3 31.3 0 0 0 .5-4.8 31.3 31.3 0 0 0-.5-4.8ZM9.95 15.35v-6.7L15.75 12l-5.8 3.35Z"/>
+      </svg>
+    </a>
+    <a href="https://twitter.com/" aria-label="Twitter">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M13.9 10.47 21.35 2h-1.76l-6.47 7.35L7.95 2H2l7.82 11.12L2 22h1.76l6.84-7.77L16.06 22H22l-8.1-11.53Zm-2.42 2.75-.8-1.11L4.38 3.3H7.1l5.08 7.1.8 1.11 6.62 9.25h-2.72l-5.4-7.54Z"/>
+      </svg>
+    </a>
+  `;
+  column.appendChild(socials);
+});
+
+document.querySelectorAll("footer .container").forEach((container) => {
+  if (container.querySelector(".footer-service-row")) return;
+  const copyright = container.querySelector(".copyright");
+  const serviceRow = document.createElement("div");
+  serviceRow.className = "footer-service-row";
+  serviceRow.innerHTML = `
+    <span><i data-lucide="shield-check"></i> Secure checkout</span>
+    <span><i data-lucide="package-check"></i> Local pickup</span>
+    <span><i data-lucide="disc-3"></i> Condition checked</span>
+    <span><i data-lucide="headphones"></i> Setup support</span>
+  `;
+  container.insertBefore(serviceRow, copyright);
+});
+
 function addToCartFromCard(card) {
   const title =
     card.querySelector("h3")?.textContent.trim() || "Selected item";
@@ -164,6 +206,9 @@ function addToCartFromCard(card) {
 
 const currentPage =
   window.location.pathname.split("/").pop() || "index.html";
+
+const currentPageName = currentPage.replace(".html", "") || "index";
+body.classList.add(`page-${currentPageName}`);
 
 const homePages = ["index.html", "home2.html", ""];
 
@@ -472,6 +517,37 @@ document.querySelectorAll(".product-card .btn, .turntable-card .btn").forEach((b
     e.preventDefault();
     const card = btn.closest(".product-card, .turntable-card");
     if (card) addToCartFromCard(card);
+  });
+});
+
+/* ========================================= */
+/* SHOP FILTERS + GUIDE CARD ACTIONS */
+/* ========================================= */
+
+document.querySelectorAll(".shop-filter-row button").forEach((button) => {
+  if (button.parentElement?.firstElementChild === button) {
+    button.classList.add("active");
+  }
+
+  button.addEventListener("click", () => {
+    const row = button.closest(".shop-filter-row");
+    const section = button.closest("section");
+    const selected = button.textContent.trim().toLowerCase();
+
+    row?.querySelectorAll("button").forEach((item) => {
+      item.classList.toggle("active", item === button);
+    });
+
+    section?.querySelectorAll(".product-card").forEach((card) => {
+      const text = card.textContent.toLowerCase();
+      const show =
+        selected === "all records" ||
+        text.includes(selected) ||
+        (selected === "collector" && (text.includes("collector") || text.includes("near mint")));
+      card.hidden = !show;
+    });
+
+    showToast("Catalog filtered", `${button.textContent.trim()} records are now shown.`, "sliders-horizontal");
   });
 });
 
