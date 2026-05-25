@@ -138,6 +138,35 @@ document.querySelectorAll(".header-actions").forEach((actions) => {
   });
 
   syncDirectionToggle();
+
+  const navLinks = document.getElementById("navLinks");
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileToolsQuery = window.matchMedia("(max-width: 900px)");
+  const mobileTools = document.createElement("div");
+  mobileTools.className = "mobile-nav-tools";
+  mobileTools.setAttribute("aria-label", "Display and shopping controls");
+
+  function syncMobileToolPlacement() {
+    if (!navLinks || !mobileMenuBtn) return;
+
+    if (mobileToolsQuery.matches) {
+      if (!mobileTools.isConnected) {
+        navLinks.insertBefore(mobileTools, navLinks.firstChild);
+      }
+      mobileTools.append(cartToggle, directionToggle);
+      if (themeToggle) mobileTools.append(themeToggle);
+    } else {
+      actions.insertBefore(cartToggle, mobileMenuBtn);
+      actions.insertBefore(directionToggle, mobileMenuBtn);
+      if (themeToggle) actions.insertBefore(themeToggle, mobileMenuBtn);
+      mobileTools.remove();
+    }
+
+    lucide.createIcons();
+  }
+
+  syncMobileToolPlacement();
+  mobileToolsQuery.addEventListener("change", syncMobileToolPlacement);
 });
 
 /* ========================================= */
@@ -253,6 +282,18 @@ document.querySelectorAll(".nav-dropdown-menu a").forEach((link) => {
   if (href === currentPage || (currentPage === "" && href === "index.html")) {
     link.classList.add("active");
   }
+});
+
+document.querySelectorAll(".nav-links a, .nav-dropdown-toggle").forEach((item) => {
+  item.addEventListener("pointerdown", () => {
+    item.classList.add("is-pressed");
+  });
+
+  ["pointerup", "pointercancel", "mouseleave", "blur"].forEach((eventName) => {
+    item.addEventListener(eventName, () => {
+      window.setTimeout(() => item.classList.remove("is-pressed"), 140);
+    });
+  });
 });
 
 if (homePages.includes(currentPage)) {
@@ -676,13 +717,16 @@ if (tradeForm && currentPage === "trade.html") {
   `;
 
   const requestSection = document.querySelector(".trade-request-section");
-  if (requestSection) {
+  const trustGridSection = document.querySelector(".trade-proof-board")?.closest("section");
+  const estimatorAnchor = trustGridSection || requestSection;
+
+  if (estimatorAnchor) {
     estimator.classList.add("separate");
     const estimatorSection = document.createElement("section");
     estimatorSection.className = "trade-estimator-section";
     estimatorSection.innerHTML = `<div class="container"></div>`;
     estimatorSection.querySelector(".container").appendChild(estimator);
-    requestSection.insertAdjacentElement("afterend", estimatorSection);
+    estimatorAnchor.insertAdjacentElement("afterend", estimatorSection);
   } else {
     tradeBox.parentElement.insertBefore(estimator, tradeBox);
   }
