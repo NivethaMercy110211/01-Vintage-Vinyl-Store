@@ -63,7 +63,7 @@ function setThemeIcon(isLight) {
   lucide.createIcons();
 }
 
-if (savedTheme === "light") {
+if (savedTheme !== "dark") {
   body.classList.add("light-mode");
   setThemeIcon(true);
 }
