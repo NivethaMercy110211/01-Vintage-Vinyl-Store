@@ -188,6 +188,35 @@ document.querySelectorAll("footer .container").forEach((container) => {
   container.insertBefore(serviceRow, copyright);
 });
 
+document.querySelectorAll("footer .footer-column").forEach((column) => {
+  const heading = column.querySelector("h4")?.textContent.trim().toLowerCase();
+  if (!heading || column.querySelector(".footer-detail")) return;
+
+  const iconMap =
+    heading === "store hours"
+      ? [
+          { icon: "calendar-days", label: "Days" },
+          { icon: "clock", label: "Hours" },
+          { icon: "door-closed", label: "Closed" },
+        ]
+      : heading === "contact"
+        ? [
+            { icon: "mail", label: "Email" },
+            { icon: "phone", label: "Phone" },
+            { icon: "map-pin", label: "Visit" },
+          ]
+        : [];
+
+  if (!iconMap.length) return;
+
+  column.querySelectorAll("p").forEach((paragraph, index) => {
+    const text = paragraph.textContent.trim();
+    const detail = iconMap[index] || { icon: "circle", label: "Info" };
+    paragraph.className = "footer-detail";
+    paragraph.innerHTML = `<i data-lucide="${detail.icon}"></i><span><strong>${detail.label}</strong>${text}</span>`;
+  });
+});
+
 function addToCartFromCard(card) {
   const title =
     card.querySelector("h3")?.textContent.trim() || "Selected item";
@@ -646,7 +675,17 @@ if (tradeForm && currentPage === "trade.html") {
     </div>
   `;
 
-  tradeBox.parentElement.insertBefore(estimator, tradeBox);
+  const requestSection = document.querySelector(".trade-request-section");
+  if (requestSection) {
+    estimator.classList.add("separate");
+    const estimatorSection = document.createElement("section");
+    estimatorSection.className = "trade-estimator-section";
+    estimatorSection.innerHTML = `<div class="container"></div>`;
+    estimatorSection.querySelector(".container").appendChild(estimator);
+    requestSection.insertAdjacentElement("afterend", estimatorSection);
+  } else {
+    tradeBox.parentElement.insertBefore(estimator, tradeBox);
+  }
 
   const recordsInput = estimator.querySelector("#estimateRecords");
   const gearInput = estimator.querySelector("#estimateGear");
